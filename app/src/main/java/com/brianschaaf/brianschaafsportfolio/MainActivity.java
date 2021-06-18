@@ -63,7 +63,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonDirections = findViewById((R.id.button_directions));
+        Button gitHubButton = findViewById(R.id.button_git_hub);
+        gitHubButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String gitHubURL = "https://github.com/bschaaf1017";
+                Intent launchGitHub = new Intent(Intent.ACTION_VIEW);
+                launchGitHub.setData(Uri.parse(gitHubURL));
+                startActivity(launchGitHub);
+            }
+        });
+
+        Button buttonPhone = findViewById(R.id.button_phone);
+        buttonPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phoneNumber = "tel:4045633499";
+                Intent launchDialer = new Intent(Intent.ACTION_DIAL);
+                launchDialer.setData(Uri.parse(phoneNumber));
+                startActivity(launchDialer);
+            }
+        });
+
+        Button buttonDirections = findViewById((R.id.button_location));
         buttonDirections.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
