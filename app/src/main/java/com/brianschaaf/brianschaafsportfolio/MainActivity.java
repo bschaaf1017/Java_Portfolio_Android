@@ -15,37 +15,19 @@ import com.brianschaaf.brianschaafsportfolio.Experience;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView experienceCard;
-    CardView educationCard;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        experienceCard = findViewById(R.id.card_view_experience);
-        educationCard = findViewById(R.id.card_view_education);
 
-        ImageView img = findViewById(R.id.image_view_react);
-        img.setImageAlpha(99);
-
-        experienceCard.setOnClickListener(new View.OnClickListener() {
+        Button experienceButton = findViewById(R.id.button_experience);
+        experienceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent experienceIntent = new Intent(MainActivity.this, Experience.class);
-
-                startActivity(experienceIntent);
+                Intent experienceActivity = new Intent(MainActivity.this, Experience.class);
+                startActivity(experienceActivity);
             }
         });
-//        educationCard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent mainCourseActivityIntent = new Intent(MainActivity.this, MainCourseActivity.class);
-//
-//                startActivity(mainCourseActivityIntent);
-//            }
-//        });
 
         Button emailButton = findViewById(R.id.button_email);
         emailButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(launchEmailApp);
             }
         });
+        
         Button linkedInButton = findViewById(R.id.button_linkedin);
         linkedInButton.setOnClickListener(new View.OnClickListener() {
             @Override
