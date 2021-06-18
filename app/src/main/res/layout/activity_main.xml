@@ -1,164 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/background" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_view_name"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:fontFamily="casual"-->
+    <!--        android:text="Brian Schaaf"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="24sp"-->
+    <!--        android:textStyle="bold" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_experience"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_buttons_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
 
-        android:padding="24dp">
+        <ImageView
+            android:id="@+id/image_view_react"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/icons8_javascript_150" />
 
-        <TextView
-            android:id="@+id/text_view_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="casual"
-            android:text="Brian Schaaf"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/linear_layout_card_view"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--&lt;!&ndash;                android:background="#808080"&ndash;&gt;-->
+        <!--                android:orientation="vertical">-->
 
-        <LinearLayout
-            android:id="@+id/linear_layout_buttons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_name">
+        <!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_height="159dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:scaleType="centerCrop" />&ndash;&gt;-->
 
-            <Button
-                android:id="@+id/button_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/icons8_email_24"
-                android:text="email"
-                android:textColor="@color/black" />
+        <!--                <TextView-->
+        <!--                    android:id="@+id/text_view_starters"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center_horizontal"-->
+        <!--                    android:text="Experience"-->
+        <!--                    android:textColor="@color/white" />-->
+        <!--            </LinearLayout>-->
 
-            <Button
-                android:id="@+id/button_linkedin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/icons8_linkedin_24"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:text="linkedin"
-                android:textColor="@color/black" />
 
-            <Button
-                android:id="@+id/button_git_hub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/icons8_github_24"
-                android:paddingLeft="2dp"
-                android:paddingRight="6dp"
-                android:text="git hub"
-                android:textColor="@color/black" />
+    </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_education"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_experience"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="15dp">
 
         <LinearLayout
-            android:id="@+id/linear_layout_buttons_2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_below="@id/linear_layout_buttons">
+            android:background="#808080"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button_phone"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/text_view_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/icons8_phone_24"
-                android:text="Call me"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/button_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/icons8_map_pin_24"
-                android:paddingLeft="2dp"
-                android:paddingRight="6dp"
-                android:text="My location"
-                android:textColor="@color/black" />
+                android:layout_gravity="center_horizontal"
+                android:text="Education"
+                android:textColor="@color/white" />
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_view_experience"
-            android:layout_width="200dp"
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout_buttons_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/button_email"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linear_layout_buttons_2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="90dp"
-            app:cardCornerRadius="15dp">
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icons8_email_24"
+            android:text="email"
+            android:textColor="@color/black" />
 
-
-            <LinearLayout
-                android:id="@+id/linear_layout_card_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#808080"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="159dp"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:id="@+id/text_view_starters"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Experience"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_view_education"
-            android:layout_width="200dp"
+        <Button
+            android:id="@+id/button_linkedin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/card_view_experience"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
-            app:cardCornerRadius="15dp">
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icons8_linkedin_24"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="linkedin"
+            android:textColor="@color/black" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#808080"
-                android:orientation="vertical">
+        <Button
+            android:id="@+id/button_git_hub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icons8_github_24"
+            android:paddingLeft="2dp"
+            android:paddingRight="6dp"
+            android:text="git hub"
+            android:textColor="@color/black" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_view_main"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Education"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_buttons_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
-        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/button_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icons8_phone_24"
+            android:text="Call me"
+            android:textColor="@color/black" />
 
-
-    </RelativeLayout>
-</ScrollView>
+        <Button
+            android:id="@+id/button_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icons8_map_pin_24"
+            android:paddingLeft="2dp"
+            android:paddingRight="6dp"
+            android:text="My location"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

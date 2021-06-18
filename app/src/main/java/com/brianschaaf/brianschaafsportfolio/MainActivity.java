@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.brianschaaf.brianschaafsportfolio.Experience;
@@ -25,13 +26,16 @@ public class MainActivity extends AppCompatActivity {
         experienceCard = findViewById(R.id.card_view_experience);
         educationCard = findViewById(R.id.card_view_education);
 
+        ImageView img = findViewById(R.id.image_view_react);
+        img.setImageAlpha(99);
+
         experienceCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent startersActivityIntent = new Intent(MainActivity.this, Experience.class);
+                Intent experienceIntent = new Intent(MainActivity.this, Experience.class);
 
-                startActivity(startersActivityIntent);
+                startActivity(experienceIntent);
             }
         });
 //        educationCard.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDirections.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String uri = "geo:0,0?q=276+Glen+Iris+Drive%2C+GA?z=10";
+                String uri = "geo:0,0?q=Atlanta%2C+GA";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(uri));
                 startActivity(intent);
