@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(launchEmailApp);
             }
         });
-        
+
         Button linkedInButton = findViewById(R.id.button_linkedin);
         linkedInButton.setOnClickListener(new View.OnClickListener() {
             @Override

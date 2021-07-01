@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view_job_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="12dp"/>
+
+        <TextView
+            android:id="@+id/text_view_app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image_view_job_icon"
+            android:layout_toRightOf="@id/image_view_job_icon"
+            android:layout_alignTop="@id/image_view_job_icon"
+            android:text="Epic Video Tech" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_description"
+            android:layout_toEndOf="@id/image_view_job_icon"
+            android:text="cable application android devices"
+            android:layout_below="@id/text_view_app_title"
+            android:layout_toRightOf="@id/image_view_job_icon"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
