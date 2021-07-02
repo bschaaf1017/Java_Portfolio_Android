@@ -39,7 +39,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/text_view_dates"
+            android:id="@+id/text_view_dates_school"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text_view_studied"
