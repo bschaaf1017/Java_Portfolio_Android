@@ -23,4 +23,7 @@ public class Experience extends AppCompatActivity {
         ProjectsAdapter adapter = new ProjectsAdapter(projects);
         list.setAdapter(adapter);
     }
+
+
+    
 }
