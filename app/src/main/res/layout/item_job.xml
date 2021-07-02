@@ -13,7 +13,8 @@
             android:id="@+id/image_view_job_icon"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_margin="12dp"/>
+            android:layout_margin="12dp"
+            />
 
         <TextView
             android:id="@+id/text_view_app_title"
@@ -25,7 +26,7 @@
             android:textStyle="bold"
             android:textSize="18dp"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="30dp"/>
 
         <TextView
             android:layout_width="match_parent"

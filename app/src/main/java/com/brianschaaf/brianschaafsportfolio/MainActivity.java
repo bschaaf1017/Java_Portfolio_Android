@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button educationButton = findViewById(R.id.button_education);
+        educationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent educationActivity = new Intent(MainActivity.this, EducationActivity.class);
+                startActivity(educationActivity);
+            }
+        });
+
         Button emailButton = findViewById(R.id.button_email);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
