@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BrianSchaafsPortfolio">
-        <activity android:name=".EducationActivity"></activity>
+        <activity android:name=".EducationActivity"
+            android:label="Education"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Experience"
             android:label="Experience"
